@@ -1,5 +1,4 @@
 # hostfile updater
-
 Downloads the most recent hostfile from http://winhelp2002.mvps.org/ and glues it together with the original host file
 
 ## Build project
