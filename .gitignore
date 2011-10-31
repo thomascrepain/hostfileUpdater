@@ -1,0 +1,6 @@
+# Mac files
+.DS_Store
+
+# Build and Release files
+hostupdater.exe
+main.o
